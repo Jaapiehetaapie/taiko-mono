@@ -4,7 +4,7 @@ mkdir -p bin && cd bin
 
 SOLC_FILE_NAME=solc-static-linux
 
-if [[ $OSTYPE == 'darwin'* ]]; then
+if [ "$(uname)" == 'Darwin' ]; then
   SOLC_FILE_NAME=solc-macos
 fi
 
