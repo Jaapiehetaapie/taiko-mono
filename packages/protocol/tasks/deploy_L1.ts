@@ -299,16 +299,28 @@ async function deployPlonkVerifier(hre: any): Promise<any> {
         }
     }
 
+    if (!byteCode) {
+        throw new Error(
+            `failed to compile PlonkVerifier, sloc: ${SOLC_COMMAND}, contract: ${sourceFile}`
+        );
+    }
+
     const [signer] = await hre.ethers.getSigners();
 
     const tx = await signer.sendTransaction({ data: "0x" + byteCode });
     const receipt = await tx.wait();
+
+    log.debug(
+        `PlonkVerifier deploying, tx ${tx.hash}, waiting for confirmations`
+    );
 
     if (receipt.status !== 1) {
         throw new Error(
             `failed to create PlonkVerifier contract, transaction ${tx.hash} reverted`
         );
     }
+
+    log.debug(`PlonkVerifier deployed at ${receipt.contractAddress}`);
 
     return { address: receipt.contractAddress };
 }
