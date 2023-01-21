@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.5.0](https://github.com/taikoxyz/taiko-mono/compare/taiko-mono-v0.4.0...taiko-mono-v0.5.0) (2023-01-21)
+
+
+### Features
+
+* **protocol:** add special logics for alpha-2 testnet ([#12987](https://github.com/taikoxyz/taiko-mono/issues/12987)) ([3b71285](https://github.com/taikoxyz/taiko-mono/commit/3b712857b5d5ede2a3683d949d1974c8cceeb69a))
+
+
+### Bug Fixes
+
+* **bridge-ui:** fix local dependency not found error for jest-dom ([#12990](https://github.com/taikoxyz/taiko-mono/issues/12990)) ([39bfb09](https://github.com/taikoxyz/taiko-mono/commit/39bfb09ff331a5522362ef683c21e75a2f9cfec3))
+* **protocol:** fix `test:integration` waiting node timeout ([#13006](https://github.com/taikoxyz/taiko-mono/issues/13006)) ([07debb7](https://github.com/taikoxyz/taiko-mono/commit/07debb779c1a142cf6050c31a5a8c9b72f26d376))
+* **status-page:** fix local dependency not found error for jest-dom ([#12991](https://github.com/taikoxyz/taiko-mono/issues/12991)) ([b7974bf](https://github.com/taikoxyz/taiko-mono/commit/b7974bf0c8a80aa200313ec27ab44857e22142ee))
+
 ## [0.4.0](https://github.com/taikoxyz/taiko-mono/compare/taiko-mono-v0.3.0...taiko-mono-v0.4.0) (2023-01-19)
 
 
